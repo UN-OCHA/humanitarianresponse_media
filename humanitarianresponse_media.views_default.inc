@@ -111,6 +111,9 @@ function humanitarianresponse_media_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Home block', 'panel_pane_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Photos & Videos';
+  $handler->display->display_options['defaults']['link_display'] = FALSE;
+  $handler->display->display_options['link_display'] = 'custom_url';
+  $handler->display->display_options['link_url'] = 'media/galleries';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
@@ -271,22 +274,6 @@ function humanitarianresponse_media_views_default_views() {
   );
   $handler->display->display_options['pane_category']['name'] = 'Media panes';
   $handler->display->display_options['pane_category']['weight'] = '0';
-  $translatables['media'] = array(
-    t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('file from media_gallery_media'),
-    t('Mime type'),
-    t('Home block'),
-    t('Photos & Videos'),
-    t('Media panes'),
-    t('Slideshow'),
-    t('Home page'),
-  );
   $export['media'] = $view;
 
   return $export;
