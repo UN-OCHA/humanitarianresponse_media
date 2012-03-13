@@ -27,4 +27,3 @@ function humanitarianresponse_media_views_api() {
     return array("version" => "3.0");
   }
 }
-
