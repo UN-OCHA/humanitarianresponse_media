@@ -48,7 +48,7 @@ function humanitarianresponse_media_file_default_displays() {
   $file_display->weight = 0;
   $file_display->status = TRUE;
   $file_display->settings = array(
-    'image_style' => 'home_slideshow',
+    'image_style' => 'media_responsive_widest',
   );
   $export['image__media_home_slideshow__file_image'] = $file_display;
 
@@ -90,7 +90,7 @@ function humanitarianresponse_media_file_default_displays() {
   $file_display->weight = 0;
   $file_display->status = FALSE;
   $file_display->settings = array(
-    'image_style' => 'home_slideshow',
+    'image_style' => 'media_responsive_widest',
   );
   $export['video__media_home_slideshow__file_image'] = $file_display;
 
@@ -100,7 +100,7 @@ function humanitarianresponse_media_file_default_displays() {
   $file_display->weight = 0;
   $file_display->status = TRUE;
   $file_display->settings = array(
-    'image_style' => 'home_slideshow',
+    'image_style' => 'media_responsive_widest',
   );
   $export['video__media_home_slideshow__media_youtube_image'] = $file_display;
 
