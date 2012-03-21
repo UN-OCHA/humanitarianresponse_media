@@ -10,7 +10,7 @@
 function humanitarianresponse_media_file_default_displays() {
   $export = array();
 
-  $file_display = new stdClass;
+  $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'image__media_home_slideshow__file_field_file_default';
   $file_display->weight = 0;
@@ -18,7 +18,7 @@ function humanitarianresponse_media_file_default_displays() {
   $file_display->settings = '';
   $export['image__media_home_slideshow__file_field_file_default'] = $file_display;
 
-  $file_display = new stdClass;
+  $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'image__media_home_slideshow__file_field_file_table';
   $file_display->weight = 0;
@@ -26,7 +26,7 @@ function humanitarianresponse_media_file_default_displays() {
   $file_display->settings = '';
   $export['image__media_home_slideshow__file_field_file_table'] = $file_display;
 
-  $file_display = new stdClass;
+  $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'image__media_home_slideshow__file_field_file_url_plain';
   $file_display->weight = 0;
@@ -34,7 +34,7 @@ function humanitarianresponse_media_file_default_displays() {
   $file_display->settings = '';
   $export['image__media_home_slideshow__file_field_file_url_plain'] = $file_display;
 
-  $file_display = new stdClass;
+  $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'image__media_home_slideshow__file_field_media_large_icon';
   $file_display->weight = 0;
@@ -42,7 +42,7 @@ function humanitarianresponse_media_file_default_displays() {
   $file_display->settings = '';
   $export['image__media_home_slideshow__file_field_media_large_icon'] = $file_display;
 
-  $file_display = new stdClass;
+  $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'image__media_home_slideshow__file_image';
   $file_display->weight = 0;
@@ -52,7 +52,7 @@ function humanitarianresponse_media_file_default_displays() {
   );
   $export['image__media_home_slideshow__file_image'] = $file_display;
 
-  $file_display = new stdClass;
+  $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'video__media_home_slideshow__file_field_file_default';
   $file_display->weight = 0;
@@ -60,7 +60,7 @@ function humanitarianresponse_media_file_default_displays() {
   $file_display->settings = '';
   $export['video__media_home_slideshow__file_field_file_default'] = $file_display;
 
-  $file_display = new stdClass;
+  $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'video__media_home_slideshow__file_field_file_table';
   $file_display->weight = 0;
@@ -68,7 +68,7 @@ function humanitarianresponse_media_file_default_displays() {
   $file_display->settings = '';
   $export['video__media_home_slideshow__file_field_file_table'] = $file_display;
 
-  $file_display = new stdClass;
+  $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'video__media_home_slideshow__file_field_file_url_plain';
   $file_display->weight = 0;
@@ -76,7 +76,7 @@ function humanitarianresponse_media_file_default_displays() {
   $file_display->settings = '';
   $export['video__media_home_slideshow__file_field_file_url_plain'] = $file_display;
 
-  $file_display = new stdClass;
+  $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'video__media_home_slideshow__file_field_media_large_icon';
   $file_display->weight = 0;
@@ -84,7 +84,7 @@ function humanitarianresponse_media_file_default_displays() {
   $file_display->settings = '';
   $export['video__media_home_slideshow__file_field_media_large_icon'] = $file_display;
 
-  $file_display = new stdClass;
+  $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'video__media_home_slideshow__file_image';
   $file_display->weight = 0;
@@ -94,7 +94,7 @@ function humanitarianresponse_media_file_default_displays() {
   );
   $export['video__media_home_slideshow__file_image'] = $file_display;
 
-  $file_display = new stdClass;
+  $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'video__media_home_slideshow__media_youtube_image';
   $file_display->weight = 0;
@@ -104,7 +104,7 @@ function humanitarianresponse_media_file_default_displays() {
   );
   $export['video__media_home_slideshow__media_youtube_image'] = $file_display;
 
-  $file_display = new stdClass;
+  $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'video__media_home_slideshow__media_youtube_video';
   $file_display->weight = 0;
