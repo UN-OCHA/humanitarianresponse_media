@@ -41,6 +41,24 @@ function humanitarianresponse_media_user_default_permissions() {
     'module' => 'media_gallery',
   );
 
+  // Exported permission: create media_gallery content
+  $permissions['create media_gallery content'] = array(
+    'name' => 'create media_gallery content',
+    'roles' => array(
+      0 => 'editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: delete own media_gallery content
+  $permissions['delete own media_gallery content'] = array(
+    'name' => 'delete own media_gallery content',
+    'roles' => array(
+      0 => 'editor',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: download original image
   $permissions['download original image'] = array(
     'name' => 'download original image',
@@ -51,6 +69,15 @@ function humanitarianresponse_media_user_default_permissions() {
       3 => 'manager',
     ),
     'module' => 'lightbox2',
+  );
+
+  // Exported permission: edit own media_gallery content
+  $permissions['edit own media_gallery content'] = array(
+    'name' => 'edit own media_gallery content',
+    'roles' => array(
+      0 => 'editor',
+    ),
+    'module' => 'node',
   );
 
   return $permissions;
