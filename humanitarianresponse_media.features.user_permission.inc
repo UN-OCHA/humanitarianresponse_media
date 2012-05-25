@@ -21,16 +21,6 @@ function humanitarianresponse_media_user_default_permissions() {
     'module' => 'media_internet',
   );
 
-  // Exported permission: administer lightbox2
-  $permissions['administer lightbox2'] = array(
-    'name' => 'administer lightbox2',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'manager',
-    ),
-    'module' => 'lightbox2',
-  );
-
   // Exported permission: administer media galleries
   $permissions['administer media galleries'] = array(
     'name' => 'administer media galleries',
@@ -57,18 +47,6 @@ function humanitarianresponse_media_user_default_permissions() {
       0 => 'editor',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: download original image
-  $permissions['download original image'] = array(
-    'name' => 'download original image',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'anonymous user',
-      2 => 'authenticated user',
-      3 => 'manager',
-    ),
-    'module' => 'lightbox2',
   );
 
   // Exported permission: edit own media_gallery content
