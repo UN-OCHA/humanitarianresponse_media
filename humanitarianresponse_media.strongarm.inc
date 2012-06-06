@@ -13,6 +13,30 @@ function humanitarianresponse_media_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'colorbox_pages';
+  $strongarm->value = 'admin*
+img_assist*
+imce*
+node/add/*
+node/*/edit
+<front>
+coordination
+coordination/*
+funding
+funding/*
+clusters
+clusters/*
+visuals-data
+visuals-data/*
+media-center
+media-center/news
+media-center/press-releases
+media-center/events';
+  $export['colorbox_pages'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_media_gallery_pattern';
   $strongarm->value = 'media-center/galleries/[node:title]';
   $export['pathauto_node_media_gallery_pattern'] = $strongarm;
