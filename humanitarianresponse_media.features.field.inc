@@ -10,7 +10,7 @@
 function humanitarianresponse_media_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'file-image-media_title'
+  // Exported field: 'file-image-media_title'.
   $fields['file-image-media_title'] = array(
     'field_config' => array(
       'active' => '1',
@@ -31,6 +31,7 @@ function humanitarianresponse_media_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '1',
       'module' => 'text',
       'settings' => array(
         'max_length' => 255,
@@ -146,7 +147,7 @@ function humanitarianresponse_media_field_default_fields() {
     ),
   );
 
-  // Exported field: 'file-video-media_title'
+  // Exported field: 'file-video-media_title'.
   $fields['file-video-media_title'] = array(
     'field_config' => array(
       'active' => '1',
@@ -167,6 +168,7 @@ function humanitarianresponse_media_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '1',
       'module' => 'text',
       'settings' => array(
         'max_length' => 255,
