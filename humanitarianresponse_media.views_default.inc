@@ -109,7 +109,7 @@ function humanitarianresponse_media_views_default_views() {
   $handler->display->display_options['filters']['filemime']['expose']['multiple'] = FALSE;
 
   /* Display: Home block */
-  $handler = $view->new_display('panel_pane', 'Home block', 'panel_pane_1');
+  $handler = $view->new_display('block', 'Home block', 'media_home_block');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Photos & Videos';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
@@ -146,41 +146,17 @@ function humanitarianresponse_media_views_default_views() {
   $handler->display->display_options['fields']['media_gallery_media']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['media_gallery_media']['type'] = 'media';
   $handler->display->display_options['fields']['media_gallery_media']['settings'] = array(
-    'file_view_mode' => 'media_preview',
+    'file_view_mode' => 'media_home_slideshow',
   );
   $handler->display->display_options['fields']['media_gallery_media']['group_rows'] = 0;
   $handler->display->display_options['fields']['media_gallery_media']['delta_offset'] = '0';
   $handler->display->display_options['fields']['media_gallery_media']['delta_reversed'] = 0;
   $handler->display->display_options['fields']['media_gallery_media']['delta_first_last'] = 0;
   $handler->display->display_options['fields']['media_gallery_media']['field_api_classes'] = 0;
-  $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'media_gallery' => 'media_gallery',
-  );
-  $handler->display->display_options['pane_category']['name'] = 'Media panes';
-  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['block_description'] = 'Home Photos & Videos';
 
   /* Display: Slideshow */
-  $handler = $view->new_display('panel_pane', 'Slideshow', 'panel_pane_2');
-  $handler->display->display_options['display_description'] = 'Home page';
-  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler = $view->new_display('block', 'Slideshow', 'media_home_slideshow');
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
@@ -259,34 +235,25 @@ function humanitarianresponse_media_views_default_views() {
   $handler->display->display_options['fields']['media_gallery_media']['delta_reversed'] = 0;
   $handler->display->display_options['fields']['media_gallery_media']['delta_first_last'] = 0;
   $handler->display->display_options['fields']['media_gallery_media']['field_api_classes'] = 0;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'media_gallery' => 'media_gallery',
+  $handler->display->display_options['block_description'] = 'Home Slideshow';
+  $translatables['media'] = array(
+    t('Master'),
+    t('View all'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('file from media_gallery_media'),
+    t('Mime type'),
+    t('Home block'),
+    t('Photos & Videos'),
+    t('more'),
+    t('Home Photos & Videos'),
+    t('Slideshow'),
+    t('Home Slideshow'),
   );
-  $handler->display->display_options['pane_category']['name'] = 'Media panes';
-  $handler->display->display_options['pane_category']['weight'] = '0';
   $export['media'] = $view;
 
   return $export;
-}
-
-/**
- * Implements hook_views_default_views_alter().
- */
-function humanitarianresponse_media_views_default_views_alter(&$views) {
-  if (isset($views['media_galleries'])) {
-    $views['media_galleries']->set_display('page');
-    $views['media_galleries']->display_handler->set_option('path', 'media-center/galleries');
-  }
 }
