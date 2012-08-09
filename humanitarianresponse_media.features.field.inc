@@ -51,6 +51,12 @@ function humanitarianresponse_media_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'media_gallery_block_thumbnail' => array(
           'label' => 'above',
           'settings' => array(),
@@ -183,6 +189,12 @@ function humanitarianresponse_media_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'ical' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
