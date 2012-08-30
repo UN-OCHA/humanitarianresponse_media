@@ -197,3 +197,13 @@ function humanitarianresponse_media_views_default_views() {
 
   return $export;
 }
+
+/**
+ * Implements hook_views_default_views_alter().
+ */
+function humanitarianresponse_media_views_default_views_alter(&$views) {
+  if (isset($views['media_galleries'])) {
+    $views['media_galleries']->set_display('page');
+    $views['media_galleries']->display_handler->set_option('path', 'media-center/galleries');
+  }
+}
