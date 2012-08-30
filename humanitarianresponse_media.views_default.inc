@@ -10,7 +10,7 @@
 function humanitarianresponse_media_views_default_views() {
   $export = array();
 
-  $view = new view;
+  $view = new view();
   $view->name = 'media';
   $view->description = '';
   $view->tag = 'default';
@@ -23,6 +23,7 @@ function humanitarianresponse_media_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'View all';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -35,46 +36,25 @@ function humanitarianresponse_media_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['style_options']['columns'] = '2';
   $handler->display->display_options['style_options']['alignment'] = 'vertical';
-  $handler->display->display_options['style_options']['fill_single_line'] = 0;
+  $handler->display->display_options['style_options']['fill_single_line'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Relationship: Content: Gallery media (media_gallery_media:fid) */
   $handler->display->display_options['relationships']['media_gallery_media_fid']['id'] = 'media_gallery_media_fid';
   $handler->display->display_options['relationships']['media_gallery_media_fid']['table'] = 'field_data_media_gallery_media';
   $handler->display->display_options['relationships']['media_gallery_media_fid']['field'] = 'media_gallery_media_fid';
-  $handler->display->display_options['relationships']['media_gallery_media_fid']['required'] = 0;
   /* Field: Content: Gallery media */
   $handler->display->display_options['fields']['media_gallery_media']['id'] = 'media_gallery_media';
   $handler->display->display_options['fields']['media_gallery_media']['table'] = 'field_data_media_gallery_media';
   $handler->display->display_options['fields']['media_gallery_media']['field'] = 'media_gallery_media';
   $handler->display->display_options['fields']['media_gallery_media']['label'] = '';
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['more_link'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['html'] = 0;
   $handler->display->display_options['fields']['media_gallery_media']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['media_gallery_media']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['media_gallery_media']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['media_gallery_media']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['media_gallery_media']['type'] = 'media';
   $handler->display->display_options['fields']['media_gallery_media']['settings'] = array(
     'file_view_mode' => 'media_preview',
   );
-  $handler->display->display_options['fields']['media_gallery_media']['group_rows'] = 0;
+  $handler->display->display_options['fields']['media_gallery_media']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['media_gallery_media']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['media_gallery_media']['delta_reversed'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['delta_first_last'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['field_api_classes'] = 0;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -105,13 +85,12 @@ function humanitarianresponse_media_views_default_views() {
   $handler->display->display_options['filters']['filemime']['expose']['label'] = 'Mime type';
   $handler->display->display_options['filters']['filemime']['expose']['operator'] = 'filemime_op';
   $handler->display->display_options['filters']['filemime']['expose']['identifier'] = 'filemime';
-  $handler->display->display_options['filters']['filemime']['expose']['required'] = 0;
-  $handler->display->display_options['filters']['filemime']['expose']['multiple'] = FALSE;
 
   /* Display: Home block */
   $handler = $view->new_display('block', 'Home block', 'media_home_block');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Photos & Videos';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['link_display'] = FALSE;
   $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['link_url'] = 'media-center/galleries';
@@ -125,38 +104,19 @@ function humanitarianresponse_media_views_default_views() {
   $handler->display->display_options['fields']['media_gallery_media']['table'] = 'field_data_media_gallery_media';
   $handler->display->display_options['fields']['media_gallery_media']['field'] = 'media_gallery_media';
   $handler->display->display_options['fields']['media_gallery_media']['label'] = '';
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['more_link'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['html'] = 0;
   $handler->display->display_options['fields']['media_gallery_media']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['media_gallery_media']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['media_gallery_media']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['media_gallery_media']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['media_gallery_media']['type'] = 'media';
   $handler->display->display_options['fields']['media_gallery_media']['settings'] = array(
     'file_view_mode' => 'media_home_slideshow',
   );
-  $handler->display->display_options['fields']['media_gallery_media']['group_rows'] = 0;
+  $handler->display->display_options['fields']['media_gallery_media']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['media_gallery_media']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['media_gallery_media']['delta_reversed'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['delta_first_last'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['field_api_classes'] = 0;
   $handler->display->display_options['block_description'] = 'Home Photos & Videos';
 
   /* Display: Slideshow */
   $handler = $view->new_display('block', 'Slideshow', 'media_home_slideshow');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
@@ -207,34 +167,14 @@ function humanitarianresponse_media_views_default_views() {
   $handler->display->display_options['fields']['media_gallery_media']['table'] = 'field_data_media_gallery_media';
   $handler->display->display_options['fields']['media_gallery_media']['field'] = 'media_gallery_media';
   $handler->display->display_options['fields']['media_gallery_media']['label'] = '';
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['more_link'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['alter']['html'] = 0;
   $handler->display->display_options['fields']['media_gallery_media']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['media_gallery_media']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['media_gallery_media']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['media_gallery_media']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['media_gallery_media']['type'] = 'media';
   $handler->display->display_options['fields']['media_gallery_media']['settings'] = array(
     'file_view_mode' => 'media_home_slideshow',
   );
-  $handler->display->display_options['fields']['media_gallery_media']['group_rows'] = 0;
+  $handler->display->display_options['fields']['media_gallery_media']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['media_gallery_media']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['media_gallery_media']['delta_reversed'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['delta_first_last'] = 0;
-  $handler->display->display_options['fields']['media_gallery_media']['field_api_classes'] = 0;
   $handler->display->display_options['block_description'] = 'Home Slideshow';
   $translatables['media'] = array(
     t('Master'),
@@ -256,15 +196,4 @@ function humanitarianresponse_media_views_default_views() {
   $export['media'] = $view;
 
   return $export;
-}
-
-
-/**
- * Implements hook_views_default_views_alter().
- */
-function humanitarianresponse_media_views_default_views_alter(&$views) {
-  if (isset($views['media_galleries'])) {
-    $views['media_galleries']->set_display('page');
-    $views['media_galleries']->display_handler->set_option('path', 'media-center/galleries');
-  }
 }
