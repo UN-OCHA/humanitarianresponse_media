@@ -6,6 +6,7 @@ php = 5.2.4
 dependencies[] = colorbox
 dependencies[] = features
 dependencies[] = file_entity
+dependencies[] = hr_resp_img
 dependencies[] = image
 dependencies[] = media_gallery
 dependencies[] = media_internet
