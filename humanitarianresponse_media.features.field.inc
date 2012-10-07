@@ -127,6 +127,24 @@ function humanitarianresponse_media_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'media_responsive_grid_4' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'media_responsive_grid_4_with_margin' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'media_responsive_humanitarianresponse' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'media_small' => array(
           'label' => 'above',
           'settings' => array(),
@@ -265,6 +283,24 @@ function humanitarianresponse_media_field_default_fields() {
           'weight' => 0,
         ),
         'media_responsive' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'media_responsive_grid_4' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'media_responsive_grid_4_with_margin' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'media_responsive_humanitarianresponse' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
