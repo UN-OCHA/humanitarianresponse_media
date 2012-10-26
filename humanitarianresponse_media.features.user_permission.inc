@@ -21,6 +21,16 @@ function humanitarianresponse_media_user_default_permissions() {
     'module' => 'media_internet',
   );
 
+  // Exported permission: administer gallery_collections vocabulary terms.
+  $permissions['administer gallery_collections vocabulary terms'] = array(
+    'name' => 'administer gallery_collections vocabulary terms',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'manager',
+    ),
+    'module' => 'vppr',
+  );
+
   // Exported permission: administer media galleries.
   $permissions['administer media galleries'] = array(
     'name' => 'administer media galleries',
