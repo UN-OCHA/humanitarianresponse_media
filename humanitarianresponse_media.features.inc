@@ -24,3 +24,13 @@ function humanitarianresponse_media_ctools_plugin_api() {
 function humanitarianresponse_media_views_api() {
   return array("version" => "3.0");
 }
+
+/**
+ * Implements hook_views_default_views_alter().
+ */
+function humanitarianresponse_media_views_default_views_alter(&$views) {
+  if (isset($views['media_galleries'])) {
+    $views['media_galleries']->set_display('page');
+    $views['media_galleries']->display_handler->set_option('path', 'media-center/galleries');
+  }
+}

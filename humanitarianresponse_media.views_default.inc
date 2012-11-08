@@ -97,11 +97,21 @@ function humanitarianresponse_media_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   /* Field: Content: Gallery media */
   $handler->display->display_options['fields']['media_gallery_media']['id'] = 'media_gallery_media';
   $handler->display->display_options['fields']['media_gallery_media']['table'] = 'field_data_media_gallery_media';
   $handler->display->display_options['fields']['media_gallery_media']['field'] = 'media_gallery_media';
   $handler->display->display_options['fields']['media_gallery_media']['label'] = '';
+  $handler->display->display_options['fields']['media_gallery_media']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['media_gallery_media']['alter']['path'] = 'media-gallery/detail/[nid]/[media_gallery_media-fid]';
+  $handler->display->display_options['fields']['media_gallery_media']['alter']['absolute'] = TRUE;
   $handler->display->display_options['fields']['media_gallery_media']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['media_gallery_media']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['media_gallery_media']['type'] = 'media';
@@ -129,15 +139,4 @@ function humanitarianresponse_media_views_default_views() {
   $export['media'] = $view;
 
   return $export;
-}
-
-
-/**
- * Implements hook_views_default_views_alter().
- */
-function humanitarianresponse_media_views_default_views_alter(&$views) {
-  if (isset($views['media_galleries'])) {
-    $views['media_galleries']->set_display('page');
-    $views['media_galleries']->display_handler->set_option('path', 'media-center/galleries');
-  }
 }
