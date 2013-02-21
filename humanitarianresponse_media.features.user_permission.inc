@@ -14,9 +14,9 @@ function humanitarianresponse_media_user_default_permissions() {
   $permissions['add media from remote sources'] = array(
     'name' => 'add media from remote sources',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'manager',
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'media_internet',
   );
@@ -25,8 +25,8 @@ function humanitarianresponse_media_user_default_permissions() {
   $permissions['administer gallery_collections vocabulary terms'] = array(
     'name' => 'administer gallery_collections vocabulary terms',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'manager',
+      'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'vppr',
   );
@@ -35,8 +35,8 @@ function humanitarianresponse_media_user_default_permissions() {
   $permissions['administer media galleries'] = array(
     'name' => 'administer media galleries',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'manager',
+      'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'media_gallery',
   );
@@ -45,7 +45,7 @@ function humanitarianresponse_media_user_default_permissions() {
   $permissions['create media_gallery content'] = array(
     'name' => 'create media_gallery content',
     'roles' => array(
-      0 => 'editor',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -54,7 +54,7 @@ function humanitarianresponse_media_user_default_permissions() {
   $permissions['delete own media_gallery content'] = array(
     'name' => 'delete own media_gallery content',
     'roles' => array(
-      0 => 'editor',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -63,7 +63,7 @@ function humanitarianresponse_media_user_default_permissions() {
   $permissions['edit own media_gallery content'] = array(
     'name' => 'edit own media_gallery content',
     'roles' => array(
-      0 => 'editor',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
