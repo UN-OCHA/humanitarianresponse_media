@@ -116,7 +116,7 @@ function humanitarianresponse_media_views_default_views() {
   $handler->display->display_options['fields']['media_gallery_media']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['media_gallery_media']['type'] = 'media';
   $handler->display->display_options['fields']['media_gallery_media']['settings'] = array(
-    'file_view_mode' => 'media_responsive',
+    'file_view_mode' => 'preview',
   );
   $handler->display->display_options['fields']['media_gallery_media']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['media_gallery_media']['delta_offset'] = '0';
