@@ -22,15 +22,22 @@ function humanitarianresponse_media_ctools_plugin_api() {
  * Implements hook_views_api().
  */
 function humanitarianresponse_media_views_api() {
-  return array("version" => "3.0");
+  return array("api" => "3.0");
 }
 
 /**
- * Implements hook_views_default_views_alter().
+ * Implements hook_node_info().
  */
-function humanitarianresponse_media_views_default_views_alter(&$views) {
-  if (isset($views['media_galleries'])) {
-    $views['media_galleries']->set_display('page');
-    $views['media_galleries']->display_handler->set_option('path', 'media-center/galleries');
-  }
+function humanitarianresponse_media_node_info() {
+  $items = array(
+    'gallery' => array(
+      'name' => t('Gallery'),
+      'base' => 'node_content',
+      'description' => t('A <em>Gallery</em> of Media.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+  );
+  return $items;
 }
