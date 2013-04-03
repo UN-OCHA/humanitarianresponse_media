@@ -12,118 +12,28 @@ function humanitarianresponse_media_file_default_displays() {
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
-  $file_display->name = 'image__media_home_slideshow__file_field_file_default';
-  $file_display->weight = 0;
-  $file_display->status = FALSE;
-  $file_display->settings = '';
-  $export['image__media_home_slideshow__file_field_file_default'] = $file_display;
-
-  $file_display = new stdClass();
-  $file_display->api_version = 1;
-  $file_display->name = 'image__media_home_slideshow__file_field_file_table';
-  $file_display->weight = 0;
-  $file_display->status = FALSE;
-  $file_display->settings = '';
-  $export['image__media_home_slideshow__file_field_file_table'] = $file_display;
-
-  $file_display = new stdClass();
-  $file_display->api_version = 1;
-  $file_display->name = 'image__media_home_slideshow__file_field_file_url_plain';
-  $file_display->weight = 0;
-  $file_display->status = FALSE;
-  $file_display->settings = '';
-  $export['image__media_home_slideshow__file_field_file_url_plain'] = $file_display;
-
-  $file_display = new stdClass();
-  $file_display->api_version = 1;
-  $file_display->name = 'image__media_home_slideshow__file_field_media_large_icon';
-  $file_display->weight = 0;
-  $file_display->status = FALSE;
-  $file_display->settings = '';
-  $export['image__media_home_slideshow__file_field_media_large_icon'] = $file_display;
-
-  $file_display = new stdClass();
-  $file_display->api_version = 1;
-  $file_display->name = 'image__media_home_slideshow__file_image';
+  $file_display->name = 'image__colorbox__file_image';
   $file_display->weight = 0;
   $file_display->status = TRUE;
   $file_display->settings = array(
-    'image_style' => 'media_responsive_widest',
+    'image_style' => '',
+    'alt' => '[file:field_file_image_alt_text]',
+    'title' => '[file:field_file_image_title_text]',
   );
-  $export['image__media_home_slideshow__file_image'] = $file_display;
+  $export['image__colorbox__file_image'] = $file_display;
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
-  $file_display->name = 'video__media_home_slideshow__file_field_file_default';
-  $file_display->weight = 0;
-  $file_display->status = FALSE;
-  $file_display->settings = '';
-  $export['video__media_home_slideshow__file_field_file_default'] = $file_display;
-
-  $file_display = new stdClass();
-  $file_display->api_version = 1;
-  $file_display->name = 'video__media_home_slideshow__file_field_file_table';
-  $file_display->weight = 0;
-  $file_display->status = FALSE;
-  $file_display->settings = '';
-  $export['video__media_home_slideshow__file_field_file_table'] = $file_display;
-
-  $file_display = new stdClass();
-  $file_display->api_version = 1;
-  $file_display->name = 'video__media_home_slideshow__file_field_file_url_plain';
-  $file_display->weight = 0;
-  $file_display->status = FALSE;
-  $file_display->settings = '';
-  $export['video__media_home_slideshow__file_field_file_url_plain'] = $file_display;
-
-  $file_display = new stdClass();
-  $file_display->api_version = 1;
-  $file_display->name = 'video__media_home_slideshow__file_field_media_large_icon';
-  $file_display->weight = 0;
-  $file_display->status = FALSE;
-  $file_display->settings = '';
-  $export['video__media_home_slideshow__file_field_media_large_icon'] = $file_display;
-
-  $file_display = new stdClass();
-  $file_display->api_version = 1;
-  $file_display->name = 'video__media_home_slideshow__file_image';
-  $file_display->weight = 0;
-  $file_display->status = FALSE;
-  $file_display->settings = array(
-    'image_style' => 'media_responsive_widest',
-  );
-  $export['video__media_home_slideshow__file_image'] = $file_display;
-
-  $file_display = new stdClass();
-  $file_display->api_version = 1;
-  $file_display->name = 'video__media_home_slideshow__media_youtube_image';
+  $file_display->name = 'image__teaser__file_picture';
   $file_display->weight = 0;
   $file_display->status = TRUE;
   $file_display->settings = array(
-    'image_style' => 'media_responsive_widest',
+    'picture_group' => 'grid_4_with_margin',
+    'fallback_image_style' => 'grid_4_mobile',
+    'alt' => '',
+    'title' => '',
   );
-  $export['video__media_home_slideshow__media_youtube_image'] = $file_display;
-
-  $file_display = new stdClass();
-  $file_display->api_version = 1;
-  $file_display->name = 'video__media_home_slideshow__media_youtube_video';
-  $file_display->weight = 0;
-  $file_display->status = FALSE;
-  $file_display->settings = array(
-    'version' => '3',
-    'theme' => 'dark',
-    'width' => '560',
-    'height' => '340',
-    'fullscreen' => 1,
-    'autoplay' => 0,
-    'related' => 1,
-    'hd' => 0,
-    'showsearch' => 1,
-    'modestbranding' => 0,
-    'showinfo' => 1,
-    'chromeless' => 0,
-  );
-  $export['video__media_home_slideshow__media_youtube_video'] = $file_display;
+  $export['image__teaser__file_picture'] = $file_display;
 
   return $export;
 }
