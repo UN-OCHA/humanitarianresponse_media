@@ -29,7 +29,7 @@ function humanitarianresponse_media_file_default_displays() {
   $file_display->status = TRUE;
   $file_display->settings = array(
     'picture_group' => 'grid_4_with_margin',
-    'fallback_image_style' => 'grid_4_mobile',
+    'fallback_image_style' => '',
     'alt' => '',
     'title' => '',
   );
