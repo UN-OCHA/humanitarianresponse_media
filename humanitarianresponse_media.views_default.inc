@@ -132,6 +132,7 @@ function humanitarianresponse_media_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['style_plugin'] = 'views_column_class';
+  $handler->display->display_options['style_options']['row_class'] = 'grid-4';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Relationship: File: Content using Media */
   $handler->display->display_options['relationships']['reverse_field_media_node']['id'] = 'reverse_field_media_node';
@@ -144,7 +145,13 @@ function humanitarianresponse_media_views_default_views() {
   $handler->display->display_options['fields']['rendered']['field'] = 'rendered';
   $handler->display->display_options['fields']['rendered']['label'] = '';
   $handler->display->display_options['fields']['rendered']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['rendered']['file_view_mode'] = 'preview';
+  $handler->display->display_options['fields']['rendered']['file_view_mode'] = 'teaser';
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['relationship'] = 'reverse_field_media_node';
+  $handler->display->display_options['sorts']['created']['granularity'] = 'minute';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
