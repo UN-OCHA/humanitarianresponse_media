@@ -62,9 +62,3 @@ l10n path = http://localize.humanitarianresponse.info/sites/localize.humanitaria
 l10n server = localize.humanitarianresponse.info
 l10n url = http://localize.humanitarianresponse.info/sites/localize.humanitarianresponse.info/files/l10n_packager/l10n_server.xml
 
-
-; Information added by drush on 2013-07-18
-version = "master-dev"
-project = "humanitarianresponse_media"
-datestamp = "1374147211"
-
