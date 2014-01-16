@@ -151,8 +151,8 @@ function humanitarianresponse_media_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['relationship'] = 'reverse_field_media_node';
-  $handler->display->display_options['sorts']['created']['granularity'] = 'minute';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['created']['granularity'] = 'minute';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');

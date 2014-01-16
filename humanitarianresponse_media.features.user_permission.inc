@@ -10,7 +10,7 @@
 function humanitarianresponse_media_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: add media from remote sources.
+  // Exported permission: 'add media from remote sources'.
   $permissions['add media from remote sources'] = array(
     'name' => 'add media from remote sources',
     'roles' => array(
@@ -21,7 +21,7 @@ function humanitarianresponse_media_user_default_permissions() {
     'module' => 'media_internet',
   );
 
-  // Exported permission: create gallery content.
+  // Exported permission: 'create gallery content'.
   $permissions['create gallery content'] = array(
     'name' => 'create gallery content',
     'roles' => array(
@@ -30,7 +30,7 @@ function humanitarianresponse_media_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete own gallery content.
+  // Exported permission: 'delete own gallery content'.
   $permissions['delete own gallery content'] = array(
     'name' => 'delete own gallery content',
     'roles' => array(
@@ -39,7 +39,7 @@ function humanitarianresponse_media_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit own gallery content.
+  // Exported permission: 'edit own gallery content'.
   $permissions['edit own gallery content'] = array(
     'name' => 'edit own gallery content',
     'roles' => array(
